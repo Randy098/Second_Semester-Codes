@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bitos_Exam
+{
+    internal class Bitos_PrelimExam
+    {
+        static void Main(string[] args)
+        {
+            string[] Fullname = { "John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Charlie Davis", "Diana Green", "Eve White", "Frank Black", "Grace Lee", "Hank Moore" };
+            int[] age = { 20, 22, 21, 23, 20, 22, 19, 24, 21, 22 };
+            string[] Course = { "Computer Science", "Engineering", "Arts", "Biology", "Computer Science", "Nursing", "Psychology", "Philosophy", "Mathematic" };
+            int[] YearLVL = { 2, 3, 2, 4, 2, 3, 1, 4, 3, 3 };
+            string[] Subject = { "Mathematics", "Physics", "Accounting", "Literature", "Chemistry", "Data Structure", "Anatomy", "Behavior Science", "Ethics", "Statistic" };
+            int[] Allowance = { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 };
+
+            Console.WriteLine("\n\n==========COMPUTER SCIENCE============");
+
+            for (int i = 0; i < Course.Length; i++)
+            {
+
+                if (Course[i] == "Computer Science")
+                {
+                    Console.WriteLine(Fullname[i]);
+                }
+            }
+
+            Console.WriteLine("\n\n========== 3rd Year ============");
+
+            for (int i = 0; i < YearLVL.Length; i++)
+            {
+
+
+                if (YearLVL[i] == 3)
+                {
+
+                    Console.WriteLine(Fullname[i]);
+                }
+            }
+
+            Console.WriteLine("\n\n========== Course & Subject ============");
+
+            for (int i = 0; i < Course.Length; i++)
+            {
+                if (Course[i] == "Engineering" && Subject[i] == "Physics")
+                {
+                    Console.WriteLine(Fullname[i]);
+                }
+            }
+
+            Console.WriteLine("\n\n========== Student that below 22 ============");
+
+            for (int i = 0; i < age.Length; i++)
+            {
+                if (age[i] < 22)
+                {
+                    Console.WriteLine(Fullname[i]);
+                }
+            }
+            Console.WriteLine("Allowance the student");
+            for (int i = 0; i < Fullname.Length; i++)
+            {
+                if (i > 0 && i < 0)
+                {
+                    Console.WriteLine(Fullname[i]);
+                }
+
+            }
+
+            Console.WriteLine("Search the name list ");
+            string search = Console.ReadLine();
+
+            Boolean found = false;
+
+            for (int i = 0; i < Fullname.Length; i++)
+            {
+                if (search.ToLower() == Fullname[i].ToLower())
+                {
+                    found = true;
+                    Console.WriteLine($"Fullname {Fullname[i]}");
+                    Console.WriteLine($"Year level {YearLVL[i]}");
+                    Console.WriteLine($"Course {Course[i]}");
+                    Console.WriteLine($"Subject {Subject[i]}");
+                    Console.WriteLine($"age of the student {age[i]}");
+                    Console.WriteLine($"allowance of the student {Allowance[i]}");
+
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine($"The name is not exist {search}");
+            }
+        }
+    }
+}
