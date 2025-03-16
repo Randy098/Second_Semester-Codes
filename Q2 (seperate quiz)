@@ -19,3 +19,5 @@ public class HelloWorld
         }
     }
 }
+
+output: count = 4
