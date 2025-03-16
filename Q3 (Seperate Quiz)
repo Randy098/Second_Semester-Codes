@@ -1,0 +1,8 @@
+int[] nums = { 1, 2, 3, 4, 5 };
+int[] result = new int[nums.Length];
+for (int i = 0; i < nums.Length; i++)
+{
+    result[i] = nums[i] * 2;
+}
+
+output: {2, 4, 6, 8, 10}
